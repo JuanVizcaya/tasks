@@ -1,4 +1,4 @@
-from django.shortcuts import get_object_or_404
+from django.shortcuts import get_object_or_404, redirect
 
 from rest_framework import viewsets, status
 from rest_framework.views import APIView
@@ -17,6 +17,8 @@ XMLRenderer.media_type = settings.XML_MEDIA_TYPE
 
 class FillDummyAPI(APIView):
     """ API para el llenado de dummy-data en la base de datos """
+    renderer_classes = (JSONRenderer, XMLRenderer)
+
     def post(self, request):
         serialized_data = TaskSerializer(data=request.data, many=True)
         if serialized_data.is_valid():
@@ -29,14 +31,14 @@ class FillDummyAPI(APIView):
 
 class SearchTaskAPI(APIView):
     """ API para la petición de búsqueda de tareas por descripción y/o estatus """
-    # renderer_classes = (JSONRenderer, XMLRenderer)
+    renderer_classes = (JSONRenderer, XMLRenderer)
 
     def get(self, request):
         if 'q' not in request.query_params:
             return Response({'error': 'Parámetros insuficientes', 'q': 'Requerido'},
                             status=status.HTTP_400_BAD_REQUEST)
         q = request.query_params.get('q')
-        
+
         if 'orderby' in request.query_params: # Si se pide ordenamiento
             order_by = request.query_params.get('orderby')
             order_choices = ['creacion', 'actualizacion', 'descripcion',
@@ -57,7 +59,7 @@ class SearchTaskAPI(APIView):
 
 class TaskViewSet(viewsets.ViewSet):
     """ API para gestión de tareas. """
-    # renderer_classes = (JSONRenderer, XMLRenderer)
+    renderer_classes = (JSONRenderer, XMLRenderer)
 
     def list(self, request):
         """ (GET): Regresa todos los elementos en forma de lista (JSON/XML). """
@@ -128,3 +130,8 @@ class TaskViewSet(viewsets.ViewSet):
                 status.HTTP_400_BAD_REQUEST)
         delete_response = task.delete()
         return Response({'status': 'deleted'}, status.HTTP_204_NO_CONTENT)
+
+
+def redirect_view(request):
+    response = redirect('/admin/')
+    return response

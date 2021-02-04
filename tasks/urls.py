@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from api.views import redirect_view
 
 # Encabezados del sitio
 admin.site.site_header = 'Administración'
@@ -24,5 +25,6 @@ admin.site.index_title = 'App Productividad'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('api.urls'), name='api')
+    path('api/', include('api.urls'), name='apis'),
+    path('', redirect_view)
 ]
