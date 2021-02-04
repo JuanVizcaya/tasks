@@ -1,0 +1,20 @@
+[
+    {
+        "descripcion": "Planear"
+    },
+    {
+        "descripcion": "Programar"
+    },
+    {
+        "descripcion": "Leer Documentación"
+    },
+    {
+        "descripcion": "Debuggear apis"
+    },
+    {
+        "descripcion": "Testear plataforma completa"
+    },
+    {
+        "descripcion": "Deployar nuevos servicios"
+    }
+]
