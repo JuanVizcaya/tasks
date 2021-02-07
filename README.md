@@ -1,12 +1,14 @@
 # API - Gestión de Tareas
-------
+
 Es una app *django/django_restframework*, que tiene como función principal la administración de __tareas__.
 Con esta API, se pueden ,`crear`, `editar`, `eliminar`, `elistar`, `buscar` y `prellenar` tareas en una base de datos mediante servicios `REST`.
 Puede responder con solicitudes `JSON` y `XML`.
 
-<div id='id0' />
-## **Índice**
------
+
+<div id='id0'/>
+
+## Índice
+
 [1.](#id1) __Instalación__
   - [Requisitos](#id11)
   - [Guía](#id12)
@@ -28,55 +30,69 @@ Puede responder con solicitudes `JSON` y `XML`.
 
 
 <div id='id1' />
+
 ## Instalación
-------
+
 <div id='id11' />
+
 #### Requisitos
 - Docker
 
 <div id='id12' />
+
 #### Guía
 
 - Clonar proyecto:
+
 `git clone https://github.com/JuanVizcaya/tasks.git`
 
 - Entrar a la carpeta "tasks":
+
 `cd tasks`
 
 - Construir los contenedores:
+
 `docker-compose up --build`
 
 - Hacer migraciones a la base de datos:
+
 `docker exec -it django_app sh -c "python /code/manage.py makemigrations"`
+
 `docker exec -it django_app sh -c "python /code/manage.py makemigrations api"`
+
 `docker exec -it django_app sh -c "python /code/manage.py migrate"`
 
 - Crear super usuario para la administración:
-`docker exec -it django_app sh -c "python /code/manage.py createsuperuser"` [^1]
 
-[^1]: Credenciales para el panel de administración
+`docker exec -it django_app sh -c "python /code/manage.py createsuperuser"`
 
 [Volver al índice](#id0)
 
 <div id='id2' />
+
 ## Utilización
-------
+
 <div id='id21' />
+
 ### Panel de Administración
 Se podrá acceder al panel de administración con las credenciales ingresadas al crear el super usuario.
 `URL: http://localhost:5001/`
 
 <div id='id22' />
+
 #### Endpoint
 `URL: http://localhost:5001/api/tasks/`
 
 <div id='id23' />
+
 #### Media Types
 - JSON   `application/json`
 - XML   `text/xml`
 
 <div id='id24' />
+
 #### Tabla de Métodos
+
 | Nombre | Tipo | URL | Accept header | Descripción |
 | ------------- | ----------- | ----------- | ----------- | ------------------- |
 | **Create** | POST |  `endpoint/`  | application/json  text/xml | Crea una nueva tarea. |
@@ -86,18 +102,21 @@ Se podrá acceder al panel de administración con las credenciales ingresadas al
 | **Fill dummy data** | POST |  `endpoint/fill-dummy`  | application/json  text/xml | Llena la base de datos con información ficticia. |
 | **Search** | GET |  `endpoint/search`  | application/json  text/xml | Busca tareas que contengan el parámetro de búsqueda "q" dentro de su descripción y/o estatus y ordena los resultados con su parámetro "orderby". |
 | **List** | GET | `endpoint/` | application/json  text/xml | Enlista todas las tareas. |
+
 [Volver al índice](#id0)
 
 
 <div id='id3' />
+
 ## Métodos
------
 
 <div id='id31' />
+
 #### Create - `POST`
 Método para crear una nueva tarea en la base de datos.
 
 ##### Parámetros
+
 | Nombre | Requerido | Opciones | Default | Descripción |
 | ----------- | -----------| ----------- | ----------- | ------------------- |
 | **descripcion** | Sí | NA | NA | Descripción de la tarea a crear |
@@ -109,7 +128,9 @@ Método para crear una nueva tarea en la base de datos.
 
 ##### Ejemplo - `JSON`:
 `Header: Accept = application/json`
+
 `POST: http://localhost:5001/api/tasks/`
+
 `body: JSON`
 ```
 {
@@ -130,10 +151,14 @@ Método para crear una nueva tarea en la base de datos.
   "estatus": "pendiente"
 }
 ```
+
 ##### Ejemplo - `XML`:
 `Header: Accept = text/xml`
+
 `Header: Content-Type = text/xml`
+
 `POST: http://localhost:5001/api/tasks/`
+
 `body: XML`
 ```
 <content>
@@ -155,14 +180,17 @@ Método para crear una nueva tarea en la base de datos.
     <estatus>pendiente</estatus>
 </root>
 ```
+
 [Volver al índice](#id0)
 ***
 
 <div id='id32' />
+
 #### Retrieve - `GET`
 Regresa la tarea solicitada al servidor por medio de su `id`.
 
 ##### Parámetros
+
 | Nombre | Requerido | Opciones | Default | Descripción |
 | ----------- | -----------| ----------- | ----------- | ------------------- |
 | **id** | Sí | NA | NA | ID de la tarea solicitada. |
@@ -172,8 +200,8 @@ Regresa la tarea solicitada al servidor por medio de su `id`.
 
 ##### Ejemplo - `JSON`:
 `Header: Accept = application/json`
-`GET: http://localhost:5001/api/tasks/1/`
 
+`GET: http://localhost:5001/api/tasks/1/`
 
 *Respuesta:*
 ```
@@ -187,8 +215,10 @@ Regresa la tarea solicitada al servidor por medio de su `id`.
   "estatus": "pendiente"
 }
 ```
+
 ##### Ejemplo - `XML`:
 `Header: Accept = text/xml`
+
 `GET: http://localhost:5001/api/tasks/2/`
 
 *Respuesta:*
@@ -204,14 +234,17 @@ Regresa la tarea solicitada al servidor por medio de su `id`.
     <estatus>pendiente</estatus>
 </root>
 ```
+
 [Volver al índice](#id0)
 ***
 
 <div id='id33' />
+
 #### Update - `PUT`
 Actualiza la tarea indicada con el `id`, con los parámetros enviados.
 
 ##### Parámetros
+
 | Nombre | Requerido | Opciones | Default | Descripción |
 | ----------- | -----------| ----------- | ----------- | ------------------- |
 | **id** | Sí | NA | NA | ID de la tarea a editar. |
@@ -228,7 +261,9 @@ Actualiza la tarea indicada con el `id`, con los parámetros enviados.
 
 ##### Ejemplo - `JSON`:
 `Header: Accept = application/json`
+
 `PUT: http://localhost:5001/api/tasks/1/`
+
 `body: JSON`
 ```
 {
@@ -250,9 +285,12 @@ Actualiza la tarea indicada con el `id`, con los parámetros enviados.
     "estatus": "completada"
 }
 ```
+
 ##### Ejemplo - `XML`:
 `Header: Accept = text/xml`
+
 `PUT: http://localhost:5001/api/tasks/2/`
+
 `body: XML`
 ```
 <content>
@@ -274,15 +312,18 @@ Actualiza la tarea indicada con el `id`, con los parámetros enviados.
     <estatus>completada</estatus>
 </root>
 ```
+
 [Volver al índice](#id0)
 ***
 
 <div id='id34' />
+
 #### Destroy - `DELETE`
 
 Elimina la tarea solicitada al servidor por medio de su `id`.
 
 ##### Parámetros
+
 | Nombre | Requerido | Opciones | Default | Descripción |
 | ----------- | -----------| ----------- | ----------- | ------------------- |
 | **id** | Sí | NA | NA | ID de la tarea a eliminar. |
@@ -292,8 +333,8 @@ Elimina la tarea solicitada al servidor por medio de su `id`.
 
 ##### Ejemplo - `JSON`:
 `Header: Accept = application/json`
-`DELETE: http://localhost:5001/api/tasks/1/`
 
+`DELETE: http://localhost:5001/api/tasks/1/`
 
 *Respuesta:*
 ```
@@ -302,8 +343,10 @@ Elimina la tarea solicitada al servidor por medio de su `id`.
   "estatus": "eliminada"
 }
 ```
+
 ##### Ejemplo - `XML`:
 `Header: Accept = text/xml`
+
 `DELETE: http://localhost:5001/api/tasks/2/`
 
 *Respuesta:*
@@ -314,16 +357,17 @@ Elimina la tarea solicitada al servidor por medio de su `id`.
     <estatus>eliminada</estatus>
 </root>
 ```
+
 [Volver al índice](#id0)
 ***
 
 <div id='id35' />
-#### Fill Dummy Data - `POST`
-Llena las tablas de la base de datos con __dummy data__[^2], enviando un array con las tareas que se quieran precargar, estas tareas son generadas por *default* con el `estatus` de __"completada"__.
 
-[^2]: Dummy Data [Wikipedia](https://en.wikipedia.org/wiki/Dummy_data)
+#### Fill Dummy Data - `POST`
+Llena las tablas de la base de datos con __dummy data__, enviando un array con las tareas que se quieran precargar, estas tareas son generadas por *default* con el `estatus` de __"completada"__.
 
 ##### Parámetros - `[array]`
+
 | Nombre | Requerido | Opciones | Default | Descripción |
 | ----------- | -----------| ----------- | ----------- | ------------------- |
 | **descripcion** | Sí | NA | NA | Descripción de la tarea a crear |
@@ -352,7 +396,9 @@ Llena las tablas de la base de datos con __dummy data__[^2], enviando un array c
 
 ##### Ejemplo - `JSON`:
 `Header: Accept = application/json`
+
 `POST: http://localhost:5001/api/tasks/fill-dummy`
+
 `body: JSON`
 ```
 [
@@ -435,10 +481,14 @@ Llena las tablas de la base de datos con __dummy data__[^2], enviando un array c
     }
 ]
 ```
+
 ##### Ejemplo - `XML`:
 `Header: Accept = text/xml`
+
 `Header: Content-Type = text/xml`
+
 `POST: http://localhost:5001/api/tasks/fill-dummy`
+
 `body: XML`
 ```
 <content>
@@ -522,15 +572,18 @@ Llena las tablas de la base de datos con __dummy data__[^2], enviando un array c
     </list-item>
 </root>
 ```
+
 [Volver al índice](#id0)
 ***
 
 <div id='id36' />
+
 #### Search - `GET`
 Busca las tareas coincidentes con el parámetro `q` indicado.
 La búsqueda se realiza sobre los campos `descripcion` y `estatus`.
 
 ##### Parámetros
+
 | Nombre | Requerido | Opciones | Default | Descripción |
 | ----------- | -----------| ----------- | ----------- | ------------------- |
 | **q** | Si | NA | NA | Cadena de texto a buscar. |
@@ -541,6 +594,7 @@ La búsqueda se realiza sobre los campos `descripcion` y `estatus`.
 
 ##### Ejemplo - `JSON`:
 `Header: Accept = application/json`
+
 `GET: http://localhost:5001/api/tasks/search?q=comp&orderby=estatus`
 
 *Respuesta:*
@@ -658,8 +712,10 @@ La búsqueda se realiza sobre los campos `descripcion` y `estatus`.
     ]
 }
 ```
+
 ##### Ejemplo - `XML`:
 `Header: Accept = text/xml`
+
 `GET: http://localhost:5001/api/tasks/search?q=API&orderby=tiempo_estimado`
 
 *Respuesta:*
@@ -724,17 +780,21 @@ La búsqueda se realiza sobre los campos `descripcion` y `estatus`.
     </results>
 </root>
 ```
+
 [Volver al índice](#id0)
 ***
 
 <div id='id37' />
+
 #### List - `GET`
 Enlista todas las tareas existentes en la base de datos, sin ningún filtro.
 
 ##### Parámetros
+
 | Nombre | Requerido | Opciones | Default | Descripción |
 | ----------- | -----------| ----------- | ----------- | ------------------- |
 | **NA** | NA | NA | NA | NA. |
+
 :bat:
 
 ##### Consideraciones
@@ -874,4 +934,5 @@ Enlista todas las tareas existentes en la base de datos, sin ningún filtro.
     }
 ]
 ```
+
 [Volver al índice](#id0)
