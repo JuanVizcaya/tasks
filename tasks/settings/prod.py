@@ -1,7 +1,9 @@
 import environ
 import os
 from pathlib import Path
+import django_heroku
 
+print('Prod Mode')
 
 env = environ.Env()
 environ.Env.read_env()
@@ -20,3 +22,5 @@ DATABASES = {
         'PORT': env('PROD_DB_PORT')
     }
 }
+
+django_heroku.settings(locals())
