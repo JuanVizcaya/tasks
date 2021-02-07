@@ -1,2 +1,6 @@
 from .settings import *
-from .prod import *
+if not DEBUG:
+    try:
+        from .prod import *
+    except:
+        pass

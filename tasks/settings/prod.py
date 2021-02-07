@@ -1,7 +1,7 @@
 import environ
 import os
 from pathlib import Path
-import django_heroku
+
 
 print('Prod Mode')
 
@@ -26,4 +26,4 @@ DATABASES = {
     }
 }
 
-# django_heroku.settings(locals())
+
