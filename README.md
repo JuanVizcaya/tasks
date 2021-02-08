@@ -28,6 +28,9 @@ Puede responder con solicitudes `JSON` y `XML`.
   - [Search](#id36)
   - [List](#id37)
 
+[4.-](#id4) __Tests__
+  - [Tests unitarios](#id41)
+
 
 <div id='id1' />
 
@@ -934,5 +937,65 @@ Enlista todas las tareas existentes en la base de datos, sin ningún filtro.
     }
 ]
 ```
+
+[Volver al índice](#id0)
+***
+
+<div id='id4' />
+
+### Tests
+Se crearon tests unitarios para la url principal y para los métodos básicos de la API
+
+<div id='id41' />
+
+#### Tests unitarios
+Ejecutar tests:
+
+`docker exec -it django_app sh -c "python /code/manage.py test"`
+
+- __Test URL Principal:__
+
+  a) Prueba que la url principal redireccione hacia el panel de administración.
+
+- __Test Método Create__ - `JSON`:
+
+  a) Prueba que la api responda correctamente a una peticion __create__ en formato `JSON`, verificando su *status_code*.
+
+  b) Verifica que se haya creado un nuevo objeto en el modelo de base de datos.
+
+- __Test Método Create__ - `XML`:
+
+  a) Prueba que la api responda correctamente a una peticion __create__ en formato `XML`, verificando su *status_code*.
+
+  b) Verifica que se haya creado un nuevo objeto en el modelo de base de datos.
+
+- __Test Método Retrieve__:
+
+  a) Prueba que la api responda correctamente a una peticion __retrieve__, verificando su *status_code*.
+
+  b) Verifica que la tarea recibida en la respuesta, sea la que se requisitó por su `id`.
+
+
+- __Test Método Update__:
+
+  a) Prueba que la api responda correctamente a una peticion __update__, verificando su *status_code*.
+
+  b) Verifica que la tarea actualizada, se vea reflejada en el modelo de base de datos.
+
+  c) Comprueba que no sea posible actualizar una tarea con `estatus` de __"completada"__.
+
+- __Test Método List__:
+
+  a) Prueba que la api responda correctamente a una peticion __list__, verificando su *status_code*.
+
+  b) Verifica que la primera tarea recibida en la respuesta, sea la misma que la primera en la base de datos.
+
+  c) Comprueba que la cantidad de elementos regresados, sea igual a la cantidad de elementos en el modelo de la base de datos.
+
+- __Test Método Destroy__:
+
+  a) Prueba que la api responda correctamente a una peticion __destroy__, verificando su *status_code*.
+
+  b) Verifica que la tarea eliminada, ya no se encuentre en el modelo de base de datos.
 
 [Volver al índice](#id0)

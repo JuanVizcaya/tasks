@@ -40,7 +40,9 @@ class APITests(TestCase):
             content_type='application/json')
         self.assertEqual(response.status_code, 200)
         descripcion = response.json()['descripcion']
-        self.assertEqual(nueva_descripcion, descripcion)
+        db_task = Task.objects.get(id=self.dummy_task.id)
+        self.assertEqual(descripcion, db_task.descripcion)
+        self.assertEqual(descripcion, nueva_descripcion)
         response_2 = self.client.put(f'/api/tasks/{self.dummy_task.id}/',
             {'descripcion': 'api test updated - actualizar completada'},
             content_type='application/json')
