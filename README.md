@@ -582,111 +582,129 @@ La búsqueda se realiza sobre los campos `descripcion` y `estatus`.
 {
     "results": [
         {
-            "id": 11,
-            "creacion": "2021-02-03T05:51:33.882825-06:00",
-            "actualizacion": "2021-02-06T11:26:33.882825-06:00",
+            "id": 1,
+            "creacion": "2021-02-08T03:40:58.328168-06:00",
+            "actualizacion": "2021-02-08T03:42:48.716786-06:00",
+            "descripcion": "Probar la respuesta XML",
+            "tiempo_estimado": 120,
+            "tiempo_registrado": 21,
+            "estatus": "completada"
+        },
+        {
+            "id": 2,
+            "creacion": "2021-02-08T03:41:17.176918-06:00",
+            "actualizacion": "2021-02-08T03:42:07.525447-06:00",
+            "descripcion": "Hacer el README.md",
+            "tiempo_estimado": 25,
+            "tiempo_registrado": 110,
+            "estatus": "completada"
+        },
+        {
+            "id": 3,
+            "creacion": "2021-01-29T17:15:54.428889-06:00",
+            "actualizacion": "2021-02-01T04:40:54.428889-06:00",
             "descripcion": "Planear API - JSON",
             "tiempo_estimado": 200,
-            "tiempo_registrado": 174,
+            "tiempo_registrado": 196,
             "estatus": "completada"
         },
         {
-            "id": 12,
-            "creacion": "2021-02-02T12:26:33.882859-06:00",
-            "actualizacion": "2021-02-04T18:30:33.882859-06:00",
+            "id": 4,
+            "creacion": "2021-02-03T09:31:54.428937-06:00",
+            "actualizacion": "2021-02-04T08:28:54.428937-06:00",
             "descripcion": "Programar API - JSON",
             "tiempo_estimado": 240,
-            "tiempo_registrado": 211,
+            "tiempo_registrado": 199,
             "estatus": "completada"
         },
         {
-            "id": 13,
+            "id": 5,
             "creacion": "2021-02-01T19:55:09.474769-06:00",
             "actualizacion": "2021-02-05T07:52:09.474769-06:00",
             "descripcion": "Leer Documentación - JSON",
             "tiempo_estimado": 120,
-            "tiempo_registrado": 109,
+            "tiempo_registrado": 97,
             "estatus": "completada"
         },
         {
-            "id": 14,
-            "creacion": "2021-02-02T04:50:33.882881-06:00",
-            "actualizacion": "2021-02-05T15:51:33.882881-06:00",
+            "id": 6,
+            "creacion": "2021-01-29T18:34:54.428960-06:00",
+            "actualizacion": "2021-02-03T00:50:54.428960-06:00",
             "descripcion": "Debuggear APIs - JSON",
             "tiempo_estimado": 90,
             "tiempo_registrado": 89,
             "estatus": "completada"
         },
         {
-            "id": 16,
-            "creacion": "2021-02-04T04:45:16.696550-06:00",
-            "actualizacion": "2021-02-04T18:04:16.696550-06:00",
+            "id": 12,
+            "creacion": "2021-02-05T02:06:34.974672-06:00",
+            "actualizacion": "2021-02-05T23:07:34.974672-06:00",
             "descripcion": "Planear API - XML",
             "tiempo_estimado": 200,
-            "tiempo_registrado": 170,
+            "tiempo_registrado": 178,
             "estatus": "completada"
         },
         {
-            "id": 17,
-            "creacion": "2021-01-28T07:19:16.696576-06:00",
-            "actualizacion": "2021-01-31T01:34:16.696576-06:00",
+            "id": 13,
+            "creacion": "2021-02-04T10:27:34.974709-06:00",
+            "actualizacion": "2021-02-06T16:58:34.974709-06:00",
             "descripcion": "Programar API - XML",
             "tiempo_estimado": 240,
-            "tiempo_registrado": 211,
+            "tiempo_registrado": 232,
             "estatus": "completada"
         },
         {
-            "id": 18,
+            "id": 14,
             "creacion": "2021-02-01T19:55:09.474769-06:00",
             "actualizacion": "2021-02-05T07:52:09.474769-06:00",
             "descripcion": "Leer Documentación - XML",
             "tiempo_estimado": 120,
-            "tiempo_registrado": 100,
+            "tiempo_registrado": 99,
             "estatus": "completada"
         },
         {
-            "id": 19,
-            "creacion": "2021-02-02T17:36:16.696594-06:00",
-            "actualizacion": "2021-02-05T20:24:16.696594-06:00",
+            "id": 15,
+            "creacion": "2021-01-29T06:51:34.974734-06:00",
+            "actualizacion": "2021-02-02T14:22:34.974734-06:00",
             "descripcion": "Debuggear APIs - XML",
             "tiempo_estimado": 90,
             "tiempo_registrado": 89,
             "estatus": "completada"
         },
         {
-            "id": 21,
-            "creacion": "2021-02-06T23:20:25.580941-06:00",
-            "actualizacion": "2021-02-06T23:20:25.580953-06:00",
+            "id": 8,
+            "creacion": "2021-02-04T18:03:54.428989-06:00",
+            "actualizacion": "2021-02-06T07:08:54.428989-06:00",
             "descripcion": "Compilar el proyecto viejo",
             "tiempo_estimado": 255,
-            "tiempo_registrado": 0,
+            "tiempo_registrado": 234,
             "estatus": "pendiente"
         },
         {
-            "id": 22,
-            "creacion": "2021-02-06T23:21:19.174181-06:00",
-            "actualizacion": "2021-02-06T23:21:19.174191-06:00",
+            "id": 9,
+            "creacion": "2021-02-06T05:56:54.429006-06:00",
+            "actualizacion": "2021-02-06T14:54:54.429006-06:00",
             "descripcion": "Completar la documentación",
             "tiempo_estimado": 135,
-            "tiempo_registrado": 0,
+            "tiempo_registrado": 129,
             "estatus": "pendiente"
         },
         {
-            "id": 23,
-            "creacion": "2021-02-06T23:22:06.892030-06:00",
-            "actualizacion": "2021-02-06T23:22:06.892040-06:00",
+            "id": 10,
+            "creacion": "2021-02-06T04:41:54.429022-06:00",
+            "actualizacion": "2021-02-07T04:50:54.429022-06:00",
             "descripcion": "Realizar las comprobaciones a la data",
             "tiempo_estimado": 75,
-            "tiempo_registrado": 0,
+            "tiempo_registrado": 60,
             "estatus": "pendiente"
         },
         {
-            "id": 24,
-            "creacion": "2021-02-06T23:22:51.832633-06:00",
-            "actualizacion": "2021-02-06T23:22:51.832642-06:00",
+            "id": 11,
+            "creacion": "2021-02-06T17:19:54.429039-06:00",
+            "actualizacion": "2021-02-07T03:30:54.429039-06:00",
             "descripcion": "Hacer más comprensible el código",
             "tiempo_estimado": 270,
-            "tiempo_registrado": 0,
+            "tiempo_registrado": 234,
             "estatus": "pendiente"
         }
     ]
@@ -700,61 +718,61 @@ La búsqueda se realiza sobre los campos `descripcion` y `estatus`.
 
 *Respuesta:*
 ```
-<?xml version="1.0" encoding="utf-8"?>
+<<?xml version="1.0" encoding="utf-8"?>
 <root>
     <results>
         <list-item>
-            <id>14</id>
-            <creacion>2021-02-02T04:50:33.882881-06:00</creacion>
-            <actualizacion>2021-02-05T15:51:33.882881-06:00</actualizacion>
+            <id>6</id>
+            <creacion>2021-01-29T18:34:54.428960-06:00</creacion>
+            <actualizacion>2021-02-03T00:50:54.428960-06:00</actualizacion>
             <descripcion>Debuggear APIs - JSON</descripcion>
             <tiempo_estimado>90</tiempo_estimado>
             <tiempo_registrado>89</tiempo_registrado>
             <estatus>completada</estatus>
         </list-item>
         <list-item>
-            <id>19</id>
-            <creacion>2021-02-02T17:36:16.696594-06:00</creacion>
-            <actualizacion>2021-02-05T20:24:16.696594-06:00</actualizacion>
+            <id>15</id>
+            <creacion>2021-01-29T06:51:34.974734-06:00</creacion>
+            <actualizacion>2021-02-02T14:22:34.974734-06:00</actualizacion>
             <descripcion>Debuggear APIs - XML</descripcion>
             <tiempo_estimado>90</tiempo_estimado>
             <tiempo_registrado>89</tiempo_registrado>
             <estatus>completada</estatus>
         </list-item>
         <list-item>
-            <id>11</id>
-            <creacion>2021-02-03T05:51:33.882825-06:00</creacion>
-            <actualizacion>2021-02-06T11:26:33.882825-06:00</actualizacion>
+            <id>3</id>
+            <creacion>2021-01-29T17:15:54.428889-06:00</creacion>
+            <actualizacion>2021-02-01T04:40:54.428889-06:00</actualizacion>
             <descripcion>Planear API - JSON</descripcion>
             <tiempo_estimado>200</tiempo_estimado>
-            <tiempo_registrado>174</tiempo_registrado>
-            <estatus>completada</estatus>
-        </list-item>
-        <list-item>
-            <id>16</id>
-            <creacion>2021-02-04T04:45:16.696550-06:00</creacion>
-            <actualizacion>2021-02-04T18:04:16.696550-06:00</actualizacion>
-            <descripcion>Planear API - XML</descripcion>
-            <tiempo_estimado>200</tiempo_estimado>
-            <tiempo_registrado>170</tiempo_registrado>
+            <tiempo_registrado>196</tiempo_registrado>
             <estatus>completada</estatus>
         </list-item>
         <list-item>
             <id>12</id>
-            <creacion>2021-02-02T12:26:33.882859-06:00</creacion>
-            <actualizacion>2021-02-04T18:30:33.882859-06:00</actualizacion>
-            <descripcion>Programar API - JSON</descripcion>
-            <tiempo_estimado>240</tiempo_estimado>
-            <tiempo_registrado>211</tiempo_registrado>
+            <creacion>2021-02-05T02:06:34.974672-06:00</creacion>
+            <actualizacion>2021-02-05T23:07:34.974672-06:00</actualizacion>
+            <descripcion>Planear API - XML</descripcion>
+            <tiempo_estimado>200</tiempo_estimado>
+            <tiempo_registrado>178</tiempo_registrado>
             <estatus>completada</estatus>
         </list-item>
         <list-item>
-            <id>17</id>
-            <creacion>2021-01-28T07:19:16.696576-06:00</creacion>
-            <actualizacion>2021-01-31T01:34:16.696576-06:00</actualizacion>
+            <id>4</id>
+            <creacion>2021-02-03T09:31:54.428937-06:00</creacion>
+            <actualizacion>2021-02-04T08:28:54.428937-06:00</actualizacion>
+            <descripcion>Programar API - JSON</descripcion>
+            <tiempo_estimado>240</tiempo_estimado>
+            <tiempo_registrado>199</tiempo_registrado>
+            <estatus>completada</estatus>
+        </list-item>
+        <list-item>
+            <id>13</id>
+            <creacion>2021-02-04T10:27:34.974709-06:00</creacion>
+            <actualizacion>2021-02-06T16:58:34.974709-06:00</actualizacion>
             <descripcion>Programar API - XML</descripcion>
             <tiempo_estimado>240</tiempo_estimado>
-            <tiempo_registrado>211</tiempo_registrado>
+            <tiempo_registrado>232</tiempo_registrado>
             <estatus>completada</estatus>
         </list-item>
     </results>
@@ -787,129 +805,147 @@ Enlista todas las tareas existentes en la base de datos, sin ningún filtro.
 ```
 [
     {
-        "id": 11,
-        "creacion": "2021-02-03T05:51:33.882825-06:00",
-        "actualizacion": "2021-02-06T11:26:33.882825-06:00",
+        "id": 2,
+        "creacion": "2021-02-08T03:41:17.176918-06:00",
+        "actualizacion": "2021-02-08T03:42:07.525447-06:00",
+        "descripcion": "Hacer el README.md",
+        "tiempo_estimado": 25,
+        "tiempo_registrado": 110,
+        "estatus": "completada"
+    },
+    {
+        "id": 1,
+        "creacion": "2021-02-08T03:40:58.328168-06:00",
+        "actualizacion": "2021-02-08T03:42:48.716786-06:00",
+        "descripcion": "Probar la respuesta XML",
+        "tiempo_estimado": 120,
+        "tiempo_registrado": 21,
+        "estatus": "completada"
+    },
+    {
+        "id": 3,
+        "creacion": "2021-01-29T17:15:54.428889-06:00",
+        "actualizacion": "2021-02-01T04:40:54.428889-06:00",
         "descripcion": "Planear API - JSON",
         "tiempo_estimado": 200,
-        "tiempo_registrado": 174,
+        "tiempo_registrado": 196,
         "estatus": "completada"
     },
     {
-        "id": 12,
-        "creacion": "2021-02-02T12:26:33.882859-06:00",
-        "actualizacion": "2021-02-04T18:30:33.882859-06:00",
+        "id": 4,
+        "creacion": "2021-02-03T09:31:54.428937-06:00",
+        "actualizacion": "2021-02-04T08:28:54.428937-06:00",
         "descripcion": "Programar API - JSON",
         "tiempo_estimado": 240,
-        "tiempo_registrado": 211,
+        "tiempo_registrado": 199,
         "estatus": "completada"
     },
     {
-        "id": 13,
+        "id": 5,
         "creacion": "2021-02-01T19:55:09.474769-06:00",
         "actualizacion": "2021-02-05T07:52:09.474769-06:00",
         "descripcion": "Leer Documentación - JSON",
         "tiempo_estimado": 120,
-        "tiempo_registrado": 109,
+        "tiempo_registrado": 97,
         "estatus": "completada"
     },
     {
-        "id": 14,
-        "creacion": "2021-02-02T04:50:33.882881-06:00",
-        "actualizacion": "2021-02-05T15:51:33.882881-06:00",
+        "id": 6,
+        "creacion": "2021-01-29T18:34:54.428960-06:00",
+        "actualizacion": "2021-02-03T00:50:54.428960-06:00",
         "descripcion": "Debuggear APIs - JSON",
         "tiempo_estimado": 90,
         "tiempo_registrado": 89,
         "estatus": "completada"
     },
     {
-        "id": 15,
-        "creacion": "2021-02-01T23:23:33.882896-06:00",
-        "actualizacion": "2021-02-03T08:00:33.882896-06:00",
+        "id": 7,
+        "creacion": "2021-01-31T01:31:54.428975-06:00",
+        "actualizacion": "2021-02-01T21:13:54.428975-06:00",
         "descripcion": "Deployar nuevos servicios - JSON",
-        "tiempo_estimado": 17,
-        "tiempo_registrado": 16,
+        "tiempo_estimado": 200,
+        "tiempo_registrado": 15,
         "estatus": "pendiente"
     },
     {
-        "id": 16,
-        "creacion": "2021-02-04T04:45:16.696550-06:00",
-        "actualizacion": "2021-02-04T18:04:16.696550-06:00",
+        "id": 8,
+        "creacion": "2021-02-04T18:03:54.428989-06:00",
+        "actualizacion": "2021-02-06T07:08:54.428989-06:00",
+        "descripcion": "Compilar el proyecto viejo",
+        "tiempo_estimado": 255,
+        "tiempo_registrado": 234,
+        "estatus": "pendiente"
+    },
+    {
+        "id": 9,
+        "creacion": "2021-02-06T05:56:54.429006-06:00",
+        "actualizacion": "2021-02-06T14:54:54.429006-06:00",
+        "descripcion": "Completar la documentación",
+        "tiempo_estimado": 135,
+        "tiempo_registrado": 129,
+        "estatus": "pendiente"
+    },
+    {
+        "id": 10,
+        "creacion": "2021-02-06T04:41:54.429022-06:00",
+        "actualizacion": "2021-02-07T04:50:54.429022-06:00",
+        "descripcion": "Realizar las comprobaciones a la data",
+        "tiempo_estimado": 75,
+        "tiempo_registrado": 60,
+        "estatus": "pendiente"
+    },
+    {
+        "id": 11,
+        "creacion": "2021-02-06T17:19:54.429039-06:00",
+        "actualizacion": "2021-02-07T03:30:54.429039-06:00",
+        "descripcion": "Hacer más comprensible el código",
+        "tiempo_estimado": 270,
+        "tiempo_registrado": 234,
+        "estatus": "pendiente"
+    },
+    {
+        "id": 12,
+        "creacion": "2021-02-05T02:06:34.974672-06:00",
+        "actualizacion": "2021-02-05T23:07:34.974672-06:00",
         "descripcion": "Planear API - XML",
         "tiempo_estimado": 200,
-        "tiempo_registrado": 170,
+        "tiempo_registrado": 178,
         "estatus": "completada"
     },
     {
-        "id": 17,
-        "creacion": "2021-01-28T07:19:16.696576-06:00",
-        "actualizacion": "2021-01-31T01:34:16.696576-06:00",
+        "id": 13,
+        "creacion": "2021-02-04T10:27:34.974709-06:00",
+        "actualizacion": "2021-02-06T16:58:34.974709-06:00",
         "descripcion": "Programar API - XML",
         "tiempo_estimado": 240,
-        "tiempo_registrado": 211,
+        "tiempo_registrado": 232,
         "estatus": "completada"
     },
     {
-        "id": 18,
+        "id": 14,
         "creacion": "2021-02-01T19:55:09.474769-06:00",
         "actualizacion": "2021-02-05T07:52:09.474769-06:00",
         "descripcion": "Leer Documentación - XML",
         "tiempo_estimado": 120,
-        "tiempo_registrado": 100,
+        "tiempo_registrado": 99,
         "estatus": "completada"
     },
     {
-        "id": 19,
-        "creacion": "2021-02-02T17:36:16.696594-06:00",
-        "actualizacion": "2021-02-05T20:24:16.696594-06:00",
+        "id": 15,
+        "creacion": "2021-01-29T06:51:34.974734-06:00",
+        "actualizacion": "2021-02-02T14:22:34.974734-06:00",
         "descripcion": "Debuggear APIs - XML",
         "tiempo_estimado": 90,
         "tiempo_registrado": 89,
         "estatus": "completada"
     },
     {
-        "id": 20,
-        "creacion": "2021-01-30T07:42:16.696607-06:00",
-        "actualizacion": "2021-02-03T09:43:16.696607-06:00",
+        "id": 16,
+        "creacion": "2021-01-31T13:53:34.974752-06:00",
+        "actualizacion": "2021-02-04T15:27:34.974752-06:00",
         "descripcion": "Deployar nuevos servicios - XML",
         "tiempo_estimado": 200,
         "tiempo_registrado": 15,
-        "estatus": "pendiente"
-    },
-    {
-        "id": 21,
-        "creacion": "2021-02-06T23:20:25.580941-06:00",
-        "actualizacion": "2021-02-06T23:20:25.580953-06:00",
-        "descripcion": "Compilar el proyecto viejo",
-        "tiempo_estimado": 255,
-        "tiempo_registrado": 0,
-        "estatus": "pendiente"
-    },
-    {
-        "id": 22,
-        "creacion": "2021-02-06T23:21:19.174181-06:00",
-        "actualizacion": "2021-02-06T23:21:19.174191-06:00",
-        "descripcion": "Completar la documentación",
-        "tiempo_estimado": 135,
-        "tiempo_registrado": 0,
-        "estatus": "pendiente"
-    },
-    {
-        "id": 23,
-        "creacion": "2021-02-06T23:22:06.892030-06:00",
-        "actualizacion": "2021-02-06T23:22:06.892040-06:00",
-        "descripcion": "Realizar las comprobaciones a la data",
-        "tiempo_estimado": 75,
-        "tiempo_registrado": 0,
-        "estatus": "pendiente"
-    },
-    {
-        "id": 24,
-        "creacion": "2021-02-06T23:22:51.832633-06:00",
-        "actualizacion": "2021-02-06T23:22:51.832642-06:00",
-        "descripcion": "Hacer más comprensible el código",
-        "tiempo_estimado": 270,
-        "tiempo_registrado": 0,
         "estatus": "pendiente"
     }
 ]
