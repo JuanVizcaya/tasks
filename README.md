@@ -386,6 +386,27 @@ Llena las tablas de la base de datos con __dummy data__, enviando un array con l
         "tiempo_estimado": 200,
         "tiempo_registrado": 15,
         "estatus": "pendiente"
+    },
+    {
+        "descripcion": "Compilar el proyecto viejo",
+        "tiempo_estimado": 255,
+        "estatus": "pendiente"
+    },
+    {
+        "descripcion": "Completar la documentación",
+        "tiempo_estimado": 135,
+        "estatus": "pendiente"
+    },
+    {
+        "descripcion": "Realizar las comprobaciones a la data",
+        "tiempo_estimado": 75,
+        "estatus": "pendiente"
+    },
+    {
+        "id": 24,
+        "descripcion": "Hacer más comprensible el código",
+        "tiempo_estimado": 270,
+        "estatus": "pendiente"
     }
 ]
 ```
