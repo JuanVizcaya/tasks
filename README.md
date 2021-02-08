@@ -23,10 +23,10 @@ Puede responder con solicitudes `JSON` y `XML`.
   - [Create](#id31)
   - [Retrieve](#id32)
   - [Update](#id33)
-  - [Destroy](#id34)
   - [Fill dummy](#id35)
   - [Search](#id36)
   - [List](#id37)
+  - [Destroy](#id34)
 
 [4.-](#id4) __Tests__
   - [Tests unitarios](#id41)
@@ -298,7 +298,8 @@ Actualiza la tarea indicada con el `id`, con los parámetros enviados.
 ```
 <content>
     <descripcion>Probar la respuesta XML</descripcion>
-    <tiempo_estimado>25</tiempo_estimado>
+    <tiempo_registrado>20</tiempo_registrado>
+    <estatus>completada</estatus>
 </content>
 ```
 
@@ -313,51 +314,6 @@ Actualiza la tarea indicada con el `id`, con los parámetros enviados.
     <tiempo_estimado>25</tiempo_estimado>
     <tiempo_registrado>20</tiempo_registrado>
     <estatus>completada</estatus>
-</root>
-```
-
-[Volver al índice](#id0)
-***
-
-<div id='id34' />
-
-#### Destroy - `DELETE`
-
-Elimina la tarea solicitada al servidor por medio de su `id`.
-
-##### Parámetros
-
-| Nombre | Requerido | Opciones | Default | Descripción |
-| ----------- | -----------| ----------- | ----------- | ------------------- |
-| **id** | Sí | NA | NA | ID de la tarea a eliminar. |
-
-##### Consideraciones
-- El __id__ debe ser numérico y existente.
-
-##### Ejemplo - `JSON`:
-`Header: Accept = application/json`
-
-`DELETE: http://localhost:5001/api/tasks/1/`
-
-*Respuesta:*
-```
-{
-  "id": 1,
-  "estatus": "eliminada"
-}
-```
-
-##### Ejemplo - `XML`:
-`Header: Accept = text/xml`
-
-`DELETE: http://localhost:5001/api/tasks/2/`
-
-*Respuesta:*
-```
-<?xml version="1.0" encoding="utf-8"?>
-<root>
-    <id>2</id>
-    <estatus>eliminada</estatus>
 </root>
 ```
 
@@ -936,6 +892,51 @@ Enlista todas las tareas existentes en la base de datos, sin ningún filtro.
         "estatus": "pendiente"
     }
 ]
+```
+
+[Volver al índice](#id0)
+***
+
+<div id='id34' />
+
+#### Destroy - `DELETE`
+
+Elimina la tarea solicitada al servidor por medio de su `id`.
+
+##### Parámetros
+
+| Nombre | Requerido | Opciones | Default | Descripción |
+| ----------- | -----------| ----------- | ----------- | ------------------- |
+| **id** | Sí | NA | NA | ID de la tarea a eliminar. |
+
+##### Consideraciones
+- El __id__ debe ser numérico y existente.
+
+##### Ejemplo - `JSON`:
+`Header: Accept = application/json`
+
+`DELETE: http://localhost:5001/api/tasks/1/`
+
+*Respuesta:*
+```
+{
+  "id": 1,
+  "estatus": "eliminada"
+}
+```
+
+##### Ejemplo - `XML`:
+`Header: Accept = text/xml`
+
+`DELETE: http://localhost:5001/api/tasks/2/`
+
+*Respuesta:*
+```
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <id>2</id>
+    <estatus>eliminada</estatus>
+</root>
 ```
 
 [Volver al índice](#id0)
