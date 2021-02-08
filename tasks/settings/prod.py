@@ -10,7 +10,7 @@ environ.Env.read_env()
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
-ALLOWED_HOSTS = ['https://tasks-1.herokuapp.com/','localhost']
+ALLOWED_HOSTS = ['tasks-1.herokuapp.com','localhost']
 
 STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 DATABASES = {
