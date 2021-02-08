@@ -118,7 +118,7 @@ class TaskViewSet(viewsets.ViewSet):
         serialized_data = TaskSerializer(task, data=request.data, partial=True)
         if serialized_data.is_valid():
             if task.estatus == 'completada': # No actualiza si el estatus es "completada"
-                return Response({'estatus': "La tarea ya ha sido completada."},
+                return Response({'estatus': "La tarea no se puede actualizar, ya ha sido completada."},
                                 status.HTTP_403_FORBIDDEN)
             serialized_data.save_updated()
             return Response(serialized_data.data) # Tarea actualizada.
